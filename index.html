@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header Section with Banner Image -->
+    <header>
+        <img src="images/banner.jpg" alt="Banner Image" class="banner">
+        <h1>To-Do List</h1>
+    </header>
+
+    <!-- Add Task Section -->
+    <section id="add-task">
+        <input type="text" id="task-input" placeholder="Enter your task here" required>
+        <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <!-- Task List Section -->
+    <section id="task-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tasks">
+                <!-- Tasks will be added here dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 To-Do App</p>
+    </footer>
+
+    <script>
+        // JavaScript function to add task to the table
+        function addTask() {
+            // Get task input value
+            var taskInput = document.getElementById("task-input");
+            var taskValue = taskInput.value.trim();
+
+            // If the input is not empty
+            if (taskValue) {
+                // Create a new table row
+                var table = document.getElementById("tasks");
+                var newRow = table.insertRow();
+
+                // Create a cell for the task
+                var taskCell = newRow.insertCell(0);
+                taskCell.textContent = taskValue;
+
+                // Create a cell for the action (Delete button)
+                var actionCell = newRow.insertCell(1);
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.onclick = function () {
+                    table.deleteRow(newRow.rowIndex); // Remove task when delete button is clicked
+                };
+                actionCell.appendChild(deleteButton);
+
+                // Clear the input field
+                taskInput.value = "";
+            } else {
+                alert("Please enter a task!");
+            }
+        }
+    </script>
+</body>
+
+</html>
