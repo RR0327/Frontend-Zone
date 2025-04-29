@@ -37,9 +37,13 @@ todo-app/
 # Contributions
 
 Created by Md Rakibul Hassan
+
 Email: rakibulhassanmiyaji27@gmail.com
+
 GitHub: [RR0327](https://github.com/RR0327)
 
 # License
 
 This project is open source and available under the MIT License.
+
+---
