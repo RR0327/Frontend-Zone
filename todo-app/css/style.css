@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+.navbar {
+    background-color: #2a2f45 !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #f8f9fa !important;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+img {
+    border-radius: 8px;
+    max-height: 350px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"] {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 6px;
+}
+
+.list-group-item {
+    padding: 15px;
+    transition: background 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.status-select {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dee2e6;
+}
+
+.status-select.pending {
+    background-color: #ffc107;
+    color: black;
+}
+
+.status-select.in-progress {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.status-select.completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-select.on-hold {
+    background-color: #6c757d;
+    color: white;
+}
+
+.status-select.not-started {
+    background-color: #dc3545;
+    color: white;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #2a2f45;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
